@@ -2,6 +2,8 @@ import express from "express"
 import cors from "cors";
 import dotenv from "dotenv";
 
+import swaggerUi from "swagger-ui-express"
+import { swaggerDoc } from "./src/utils/swagger.js";
 import userRoutes from "./src/routes/userRoutes.js";
 import authRoutes from "./src/routes/authRoutes.js";
 import adminRoutes from "./src/routes/adminRoutes.js";
@@ -21,6 +23,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api",userRoutes);
 app.use("/api/auth",authRoutes);
 app.use("/api/admin",adminRoutes);
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 
 

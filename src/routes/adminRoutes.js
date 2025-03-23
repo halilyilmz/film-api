@@ -4,7 +4,7 @@ import { authAdmin } from '../middlewares/authMiddleware.js';
 const adminRoutes = express.Router();
 
 
-adminRoutes.post('/films',authAdmin,addFilm);
+adminRoutes.post('/addFilm',authAdmin,addFilm);
 adminRoutes.put('/films/:id',authAdmin,updateFilm);
 adminRoutes.delete('/films/:id',authAdmin,deleteFilm);
 
