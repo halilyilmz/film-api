@@ -97,7 +97,7 @@ export const setFilmAsWatched = async (req, res) => {
 
 /**
  * @swagger
- * /dilms/addComment/{userId}:
+ * /films/addComment/{userId}:
  *   post:
  *     tags:
  *       - Comments
